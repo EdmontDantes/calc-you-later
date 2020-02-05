@@ -22,7 +22,10 @@ function calculate (num1, num2, operator){
     
     return Number(num1) % Number(num2);
   }
-  else if (operator !== '+' && operator !=='-' && operator !== 'x' && operator !== '/' && operator !== '%') {
+  // else if (operator !== '+' || operator !== '-' || 'x' || '/' || '%' || 'modulus' || 'mod' || 'divided by' || 'times' || 'X' || 'multiplied by' || 'subtracted from' || 'added to') {
+  //   return "Sorry, that's not a mathematical operation!";
+  // }
+  else{
     return "Sorry, that's not a mathematical operation!";
   }
 
