@@ -1,7 +1,42 @@
 // Grab the calculate function from our other file. Imports can be tricky at first, so this one's a gimme!
 const calculate = require('./calculate-back-end.js')
+//try to get input when entering command $ node calculate-front-end.js
+
+// console.log(process.argv[0]);   
+// console.log(process.argv[1]);
+// console.log(process.argv[2]);      
+// console.log(process.argv[3]);
+// console.log(process.argv[4]);
+// console.log(process.argv[5]);
+// function twoWordsArraysIntoOne {
+//     let addedOperand = '';
+//     if (process.argv.length === 5) {
+//     addedOperand = process.argv[3] + ' ' + process.argv[4];
+//     }
+//     else {
+//         addedOperand = process.argv[3];
+//     }
+// }
+// // let numberArgvProcess1 = process.argv[2]
+// // let numberArgvProcess2 = process.argv[]
 
 
+let numOne = process.argv[2];
+let numTwo = 0;
+let operator = 0;
+// console.log(process.argv.length === 6))
+
+if (process.argv.length === 5){
+    operator = process.argv[3];
+    numTwo = process.argv[4];
+}else if (process.argv.length === 6){
+    operator = process.argv[3] + ' ' + process.argv[4];
+    numTwo = process.argv[5];
+}
+
+
+
+console.log(calculate(numOne,numTwo,operator))
 
 
 // For the following steps, write the code, like the example above, DIRECTLY
